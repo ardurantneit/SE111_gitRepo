@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon, the coolest" >
+    <meta name="description" content="W2D2 Bio Assignment Demo" >
+    
+    <title>W2 | Bio</title>
+
+    <!--in document styling; loads in head so styles apply as content loads-->
+    <style>
+        /*in here we must write in CSS*/
+        /*SELECTING in CSS & Javascript: select specific elements(s) on a page
+            *by ELEMENT type      ex:body, div, p
+            *by ID attribute      ex: #wrapper, #nav, #footer, #title
+            *by CLASS attribute   ex: coming in week 3
+        */
+
+        div {/*applies to all divs in the page*/
+        
+            border: 1px solid black;
+            padding: 10px; /*adds 10px of space to all 4 sides inbetween content & border*/
+            margin: 5px;/*adds 5px of space between elements (space added outside of border)*/
+        
+        }
+
+        #wrapper{/*3 specifies ID name, only applies to single element with that ID */
+        background-color: white;
+        
+        }
+
+        #nav, #footer {/*can provide list or collection of elements to select */
+        
+            background-color: rgb(104, 102, 101);
+        
+        }
+
+        a {/*syles all a (link) tags in a page*/
+        
+            text-decoration: rgb(200,200,200);
+            font-size: 20px;
+            margin-right: 25px;
+
+        }
+        a:hover{
+            color: teal;
+        }
+
+    </style>
+
+
+</head>
+<body style="background-color: grey;">
+   <div id="wrapper"><!--This div holds and "wraps around/together" all content on the page-->
+        
+        <h1>Aidan Durant</h1>
+
+        <div id="nav"><!--Navigation--------------->
+            <!--ID Names can only be used 1x per page-->
+
+            <!--linking to outside pages [not part of website] you need the FULL Path-->
+
+            <a href="https://www.meca.edu/" target="_blank">Visit MECA</a>
+            <!--href holds the URL of website linking to-->
+            <!-- target="_blank" opens link in a new tab in browser-->
+            <a href="#bio">BIO</a>
+            <a href="#school">SCHOOLING</a>
+            <a href="#hobbies">HOBBIES</a>
+            <a href="#footer">BOTTOM OF PAGE</a>
+
+        </div>
+
+        <div id="bio"><!--Bio Section------------->
+            <h2>About me</h2>
+
+            <p>This document cannot be displayed within Canvas.</p>
+
+            <!--img tag inserts an image; can be relative files (found within project folder) or absolute files(found elsewhere online, needs full URL address path)-->
+
+            <!--Remote img link example-->
+            <img src="https://wallpaperaccess.com/full/2099895.jpg" alt="Destiny logo" style="width: 350px;">
+            
+            <!--Required attributes:
+            *src provides the path to the image file, either remote or relative
+            *alt provides alternative text for written page display if image link is broken OR for accessibility of screenreaders-->
+
+            <!--RELATIVE img link example-->
+            <img src="images/stormsEnd.jpg" alt="illustration of storms end during a summer day" style="width: 500px;">
+
+        </div>
+
+        <div id="school"><!--SChooling Section----------->
+
+            <h2>Schooling</h2>
+
+            <ol>
+                <li>School 1</li>
+                <li>School 2</li>
+                <li>School 3</li>
+            </ol>
+            
+            <img src="images/meca.jpg" alt="yeah its a building" style="width: 450px;">
+
+
+        </div>
+
+        <div id="hobbies"><!--Hobbies Section---------->
+            
+            <h2>Hobbies</h2>
+
+            <ol>
+                <li>Hobbies 1</li>
+                <li>Hobbies 2</li>
+                <li>Hobbies 3</li>
+            </ol>
+            
+
+        </div>
+
+        <div id="footer"><!--Footer section----------->
+
+           <a href="#wrapper">Back to the Top</a>
+           <p>Aidan Durant</p>
+            
+        
+        </div>
+
+   </div>
+
+</body>
+</html>
