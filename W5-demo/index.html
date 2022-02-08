@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AD">
+    <meta name="description" content="W5D2 tables & forms demo">
+
+    <title>W5 - tables & Forms</title>
+
+</head>
+
+<body>
+
+    <h1>Basic Form Demo</h1>
+
+    <h2>Form W/o Table</h2>
+
+    <!--text - Fields for mnuel entry/input via the keyboard - value becomes what user enters into the text field-->
+
+    <!--Attribute for label attribut, should math the name attribute of the input element-->
+
+    <form>
+
+        <label for="firstName">First name: </label>
+        <input type="text" name="firstName" id="firstName">
+
+        <br>
+
+        <label for="email">email: </label>
+        <input type="text" name="email" id="email">
+
+    </form>
+
+    <h2>Form W/ Table</h2>
+
+    <!--we put tabels inside of forms to allign and organize them-->
+
+    <form>
+
+        <table>
+
+           <!--<thead> can be used for column headers-->
+            
+            <tbody>
+
+                <tr>
+                    <!--first data cell, first column (left)-->
+                    <td>
+                        <label for="firstName">First name: </label>
+                    </td>
+
+                    <!--Second data cell, second column(right)-->
+                    <td>
+                        <input type="text" name="firstName" id="firstName" required>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                        <label for="email">Email: </label>
+                    </td>
+
+                   
+                    <td>
+                        <input type="text" name="email" id="email">
+                    </td>
+
+                </tr>
+
+                <!--select- drop down element - works like <ol> or <ul>, requires outter elements that contain items <options>-->
+                <tr>
+                    
+                    <td>
+                        <label for="faveColor">Pick Your Favorite Color: </label>
+                    </td>
+
+                   
+                    <td>
+                        <select name="faveColor">
+                            <!--each option must have a value attribute so data can be passed from the form accurately-->
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+
+                        </select>
+                    </td>
+
+                </tr>
+                <!--Radio buttons are a type of input element; they are circular options only one can be chosen from a set -->
+                <tr>
+                    
+                    <td>
+                        <label for="study">Program of study</label>
+                       
+                    </td>
+
+                   
+                    <td>
+                        <input type="radio" name="study" value="SE"> Software Engineering <br>
+                        <input type="radio" name="study" value="NE"> Network Engineering <br>
+                        <input type="radio" name="study" value="CYB"> Cybersecurity <br>
+                        <input type="radio" name="study" value="WBD"> Web Development <br>
+                    </td>
+
+                </tr>
+
+                <!--checkboxes allow for multiple selections-->
+                <tr>
+                    
+                    <td>
+                       <label for="vehicle">Select Your vehicle</label>
+                    </td>
+
+                   
+                    <td>
+                        <input type="checkbox" name="vehicle" value="car">Car <br>
+                        <input type="checkbox" name="vehicle" value="ship">Ship <br>
+                        <input type="checkbox" name="vehicle" value="horse">Horse <br>
+                        <input type="checkbox" name="vehicle" value="dragon">Dragon <br>
+                    </td>
+
+                </tr>
+
+                <!--textarea is a comment box-->
+                <tr>
+                    
+                    <td>
+                       <label for="comments">Comments:</label>
+                    </td>
+
+                   
+                    <td>
+                        <textarea name="comments" row="5" cols="20" placeholder="Your Comments Here" maxlength=10></textarea>
+                    </td>
+
+                </tr>
+
+                <!--input types-->
+                <tr>
+                    
+                    <td>
+                       <label for="date">Todays Date: </label>
+                    </td>
+
+                   
+                    <td>
+                        <input type="date" name="date" id="date">
+                    </td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>
+                       
+                    </td>
+
+                   
+                    <td>
+                        <input type="submit" value="SUBMIT!">
+                    </td>
+
+                </tr>
+
+                
+
+
+            </tbody>
+
+        </table>
+
+    </form>
+    
+</body>
+</html>
