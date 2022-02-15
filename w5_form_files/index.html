@@ -159,6 +159,13 @@
                     <td>
                         <label for="cake">Cake</label>
                     </td>
+                    <td>
+                        <select name="cake">
+                            <option selected>Chocolate</option>
+                            <option>Vanilla</option>
+                            <option>I'll bring my own</option>
+                        </select>
+                    </td>
                     
                 </tr>
                 <tr>
@@ -170,17 +177,29 @@
                     <td>
                         <label for="colors">Color Scheme</label>
                     </td>
+                    <td>
+                        Choose a color scheme for the Party
+                        <br>
+                        <input type="color" name="colors">
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <label for="comments">Additional Comments</label>
                     </td>
+                    <td>
+                        <textarea name="comments" placeholder="Please add any additional comments here"></textarea>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-
+                        
+                    </td>
+                    <td>
+                        <input type="submit" value="Submit">
                     </td>
                 </tr>
+                
 
 
             </thead>
