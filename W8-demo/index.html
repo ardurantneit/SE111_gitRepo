@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aidan Durant">
+    <title>W8 | demo</title>
+</head>
+<body>
+    <h1>W8 java demo | Array's & object</h1>
+
+    <div id = "output">
+
+    </div>
+    <script>
+        //create a new populated array
+        var people = [
+            'Katie',    //people[0]
+            'jay',      //people[1]
+            'spencer',  //people[2]
+            'luigi',     //people[3]
+            'dan'       //people[4]
+        ]
+
+        console.log(people)
+        console.log(people[3])
+        console.log(`there are ${people.length} values in the people array`)
+
+        //arrayName + index (arrayName[#]) is the same as a singular variable
+
+        //add another value to the people array 
+        people[5] = `Sebastian`
+        console.log(people)
+
+        people.push(`Ryan`) //jsut like the append() in python
+        console.log(people)
+
+        people.push(
+            prompt(`Enter a name to be added: `)
+        )
+        console.log(people)
+
+        var colors = [ //a parallel array to people; connected data (data that 'belongs')
+            `grey`,
+            `black`,
+            `red`,
+            `orange`,
+            `blue`,
+            `green`,
+            `pink`
+        ]
+
+        console.log(`${people[5]}'s favorite color is ${colors[5]}`)
+
+        //create an empty array
+        var class_ = []
+        var indexArray =[]
+
+        //proccess the entire array set at once
+        //Array processing --> for loop(standard)
+
+        for(let index = 0; index < people.length; index++)
+        {
+            //below occurs EVERY value in the array 
+            console.log(`${people[index]}'s favorite color is ${colors[index]}`)
+            class_.push(`SE111.02`)
+            indexArray.push(index + 1)
+
+        }
+
+        console.log(`${people[3]}'s favorite color is ${colors[3]} and they are in the ${class_[3]} section. they are number ${indexArray[3]} in the Array`)
+        
+        var associatePeople = []
+        associatePeople[`first`] = `katie`
+        associatePeople[`last`] = ` truchon`
+        associatePeople[`dog`] = `george`
+
+        //2D ARRAY'S
+        var cars =[]
+        cars[0] = [`make`, `ford`, ` chevy`, `toyota`, `honda`]
+        cars[1] = [`Models`, `f-150`, ` cavaliar`, `camry`, `prelude`]
+        cars[2] = [`years`, `2016`, ` 2006`, `1999`, `1997`]
+
+        //with 2 d arrays there are two sets of [][] following the name 
+        //first [] --> point containging the array you are accessing data from (row/record)
+        //second [] --> which piece of data (colum/ field)
+
+        console.log(`${cars[1][4]}`)
+
+        //create a new object 
+
+        var person1 = {
+            first: `katie`, 
+            last: `truchon`,
+            hasPets: true,
+            height: 64,
+            classes:[`se11`, `vgd129`, `gmw251`],
+            pets: {dogs: [`geroge`, `marlowe`], cats: [`jack`]},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}!`)}
+        }
+        console.log(person1)
+        console.log(person1.height)
+        console.log(person1.classes)
+        console.log(person1.classes[0])
+        console.log(person1.pets.dogs[1])
+        person1.greeting()
+
+        var person2 = {
+            first: `Antonio`, 
+            last: `Martinez`,
+            hasPets: true,
+            height: 70,
+            classes:[`se11`],
+            pets: {dogs: [], cats: [`Tadej`]},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}!`)}
+        }
+
+        console.log(person2)
+        console.log(person2.height)
+        console.log(person2.classes)
+        console.log(person2.classes[0])
+        console.log(person2.pets.dogs[0])
+        person2.greeting()
+
+        //objects use the for in loop
+        for(let key in person1)
+        {//delcare block var name for kye/property placeholder within the objectName; for as many keys in person1 object, this loop will run 
+            console.log(`${key}: ${person1[key]}`) //displays key name as well as value assigned to key within the object 
+
+        }
+
+        //w8 assignments notes 
+        
+        //create and array populated with objects
+        var human = [
+            person1, // you can populate previously stored data 
+            person2
+        ]
+
+        var person3 = {
+            first: `cam`,
+            last: `arbo`,
+            age: 27,
+            height: 70,
+            classes: [`SE111`],
+            pets: {dogs: [`thor`, ` valkyrie`]}
+        }
+
+        //ad new objects to the array 
+        human.push(person3)//humans[3] = person3
+
+        //in order to process a dat structure populated with dat structures ..... we need loop ception
+        for( let i = 0; i < human.length; i++)
+        {//this outer loop moves through the different values of the array; since these values are b=objects we need a second loop...
+            console.log(`info for ${human[i].first}:`)
+
+            for(let key in human[i])
+            {// this loop displays each keyword pair within the object (humans[i])
+                console.log(`${key}: ${human[i][key]}`)
+
+            }
+
+            console.log(`---------------------`)
+
+        }
+
+        
+      //write the new list to the page
+        {//this outer loop moves through the different values of the array; since these values are b=objects we need a second loop...
+            output+= ` <h3>Info for ${human[i].first}:</h3>`
+
+
+            for(let key in human[i])
+            {// this loop displays each keyword pair within the object (humans[i])
+                output += `<p><b>${key.toUpperCase()}</b>: ${human[i][key]}</p>`
+
+            }
+
+            output += `<hr>`
+        }
+        //adds new string to the page display
+        document.querySelector(`#output`).innerHTML = output
+    </script>
+    
+</body>
+</html>
