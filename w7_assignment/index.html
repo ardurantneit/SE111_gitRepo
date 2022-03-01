@@ -132,10 +132,10 @@
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
-            var info = document.querySelector(`#info`).value
+            var info = document.querySelector(`#info`)
 
             //create a new var called 'num' and store the entire #check *HTML element* to it
-            var num = document.querySelector(`#check`).value
+            var num = document.querySelector(`#check`)
 
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
             info.innerHTML = finalMessage
@@ -148,7 +148,8 @@
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
             var submit = document.querySelector(`#submit`).value
-            submit.addEventListener(`click`, submitNow)
+            submit.addEventListener
+            submitNow(e)
         
             function submitNow(e)
             {
