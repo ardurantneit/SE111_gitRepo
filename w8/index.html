@@ -36,8 +36,8 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		var firstName = document.querySelectorAll(`#first`)
-		var lastName = document.querySelectorAll(`#last`)
+		var firstName = document.querySelector(`#first`).value
+		var lastName = document.querySelector(`#last`).value
 
 		//Make an array to store the people
 		var people = []
@@ -75,6 +75,8 @@
 				last: lastName
 
             }//end of person object
+
+			console.log(person)
 
 
 
