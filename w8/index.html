@@ -36,14 +36,12 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		var first = document.querySelectorAll(`#first`).value
-		var last = document.querySelectorAll(`#last`).value
+		var firstName = document.querySelectorAll(`#first`)
+		var lastName = document.querySelectorAll(`#last`)
 
 		//Make an array to store the people
-		var people = [
+		var people = []
 
-
-		]
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
 		
@@ -72,10 +70,9 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-				first: first,
-				last: last
-
-
+				
+				first: firstName, //need to fix theses two lines 
+				last: lastName
 
             }//end of person object
 
@@ -117,13 +114,13 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-					output = `<p><b>First:</b> ${person[first]} </p><br><p><b>Last:</b> ${person[last]}`
-					output += '<hr>'
+					output += `<p><b>${key.toUpperCase()}</b>: ${people[i][key]}</p>`
+					
 				
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
+				output += '<hr>'
 
 
 			}//end of loop going through people array to edit 'output'
